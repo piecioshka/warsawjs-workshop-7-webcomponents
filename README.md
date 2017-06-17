@@ -4,6 +4,10 @@
 
 ![](http://warsawjs.com/assets/images/logo/logo-transparent-240x240.png)
 
+## Wspierane przeglądarki
+
+* Google Chrome v54
+
 ## Projekt 1: Mockup
 
 > Prezentacja obrazka w na komputerze
@@ -28,47 +32,59 @@
     5.1. Rozwiązać problem braku szablonu za pomocą `cloneNode(true)`
 6. Dodać możliwość ustawiania innego tekstu dla różnych elementów
     6.1. Rozwiązać problem z kodowaniem ustawiając odpowiedni meta tag.
-
-### Error nr. 1
-
-```
-Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': "mockup" is not a valid custom element name
-```
-
-Nie wolno:
-
-```javascript
-customElement.define('mockup', MockupElement);
-```
-
-Trzeba:
-
-```javascript
-customElement.define('mockup-element', MockupElement);
-```
-
-### Error nr. 2
-
-```
-Uncaught DOMException: Failed to construct 'CustomElement': The result must not have children (anonymous) @ (index):13
-```
-
-Nie wolno:
-
-```javascript
-this.textContent = '...';
-```
-
-Trzeba:
-
-```javascript
-shadow.textContent = '...';
-```
+7. Zamknięcie komponentu w pojedynczy katalog
+    7.1. Stworzenie głównego pliku index.html w aplikacji
+    7.2. Import komponentu za pomocą HTML Imports `<link rel="import"/>`
 
 ---
 
 ## Projekt 2
 
+---
+
+## Projekt 3
+
+---
+
+## Popularne błędy
+
+* Error nr. 1
+    
+    ```
+    Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': "mockup" is not a valid custom element name
+    ```
+
+    Nie wolno:
+    
+    ```javascript
+    customElement.define('mockup', MockupElement);
+    ```
+
+    Trzeba:
+    
+    ```javascript
+    customElement.define('mockup-element', MockupElement);
+    ```
+
+* Error nr. 2
+    
+    ```
+    Uncaught DOMException: Failed to construct 'CustomElement': The result must not have children (anonymous) @ (index):13
+    ```
+    
+    Nie wolno:
+    
+    ```javascript
+    this.textContent = '...';
+    ```
+    
+    Trzeba:
+    
+    ```javascript
+    shadow.textContent = '...';
+    ```
+
+---
 ## License
 
 [The MIT License](http://piecioshka.mit-license.org) @ 2017
