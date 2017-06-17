@@ -17,6 +17,10 @@
     border: 1px solid #e2e2e2;
 }
 
+h1 {
+    margin: 0 0 15px 0;
+}
+
 .media-screen {
     display: inline-block;
     width: 550px;

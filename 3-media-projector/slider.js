@@ -1,5 +1,5 @@
 const DEFAULT_VALUE = 0;
-const DEFAULT_DELAY = 1000;
+const DEFAULT_DELAY = 3000;
 
 class Slider {
     constructor({ items, callback, delay = DEFAULT_DELAY }) {

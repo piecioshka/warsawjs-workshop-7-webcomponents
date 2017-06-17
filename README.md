@@ -153,6 +153,8 @@
 ## Źródła, czyli tam gdzie warto zajrzeć
 
 * https://github.com/piotrl/github-profile-card
+* https://css-tricks.com/snippets/css/complete-guide-grid/
+* http://placeskull.com/
 
 ---
 ## License

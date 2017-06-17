@@ -1,3 +1,5 @@
+const LIMIT_OF_REPOSITORY_LIST = 9;
+
 class GitHubProfileCardElement extends HTMLElement {
     constructor() {
         super();
@@ -21,8 +23,8 @@ class GitHubProfileCardElement extends HTMLElement {
     }
 
     _fetchProfileDetails(login) {
-        // let url = 'mocks/github-piecioshka-profile.json';
-        let url = 'https://api.github.com/users/' + login;
+        let url = '../mocks/github-piecioshka-profile.json';
+        // let url = 'https://api.github.com/users/' + login;
         return fetch(url)
             .then((response) => {
                 return response.json();
@@ -57,8 +59,8 @@ class GitHubProfileCardElement extends HTMLElement {
     }
 
     _fetchProfileRepositories(profile) {
-        let url = profile.repos_url;
-        // let url = 'mocks/github-piecioshka-repositories.json';
+        // let url = profile.repos_url;
+        let url = '../mocks/github-piecioshka-repositories.json';
         return fetch(url)
             .then((response) => {
                 return response.json();
@@ -67,7 +69,7 @@ class GitHubProfileCardElement extends HTMLElement {
                 return repositories.sort(this._sortByPopularity);
             })
             .then((repositories) => {
-                repositories.length = 5;
+                repositories.length = LIMIT_OF_REPOSITORY_LIST;
                 return repositories;
             })
             .then((repositories) => {

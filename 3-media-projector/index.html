@@ -1,5 +1,12 @@
 <meta charset="utf-8"/>
 <title>Projekt 3: Media Projector</title>
+<style>
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+</style>
+
+<!-- //-->
 
 <template id="media-projector-template">
     <link rel="stylesheet" href="main.css"/>
@@ -11,8 +18,42 @@
 <script src="slider.js"></script>
 <script src="main.js"></script>
 
+<!-- //-->
+
+<template id="mockup-template">
+    <link rel="stylesheet" href="../1-mockup/main.css"/>
+    <h1>Czy ten tekst się wyświetli?</h1>
+    <img src="https://piecioshka.pl/blog/test-zapytania-http" alt=""/>
+</template>
+
+<script src="../1-mockup/main.js"></script>
+
+<!-- //-->
+
+<template id="github-profile-card-template">
+    <link rel="stylesheet" href="../2-github-profile-card/main.css"/>
+
+    <img class="profile-avatar" src="" alt=""/>
+    <h1 class="profile-name">...</h1>
+    <p class="profile-bio">...</p>
+    <h2 class="profile-location">...</h2>
+    <hr/>
+    <ul class="profile-repository-list"></ul>
+</template>
+
+<script src="../2-github-profile-card/main.js"></script>
+
+<!-- //-->
+
 <media-projector-element>
-    <img src="http://placeskull.com/550/300"/>
-    <img src="http://placeskull.com/550/300/ff00ff"/>
-    <img src="http://placeskull.com/550/300/ffee00"/>
+    <github-profile-card-element
+        login="piecioshka"
+    ></github-profile-card-element>
+
+    <img src="https://unsplash.it/550/300/?image=1024" alt=""/>
+
+    <mockup-element
+        label="Mockup Component"
+        photo="http://placeskull.com/200/180/4CC417/10"
+    ></mockup-element>
 </media-projector-element>
