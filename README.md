@@ -137,13 +137,13 @@
     Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': "mockup" is not a valid custom element name
     ```
 
-    &#x26D4;Nie wolno:
+    &#x26D4; Nie wolno:
 
     ```javascript
     customElement.define('mockup', MockupElement);
     ```
 
-    &#x2705; Trzeba:
+    &#x1F44D; Trzeba:
 
     ```javascript
     customElement.define('mockup-element', MockupElement);
@@ -155,13 +155,13 @@
     Uncaught DOMException: Failed to construct 'CustomElement': The result must not have children (anonymous) @ (index):13
     ```
 
-    &#x26D4;Nie wolno:
+    &#x26D4; Nie wolno:
 
     ```javascript
     this.textContent = '...';
     ```
 
-    &#x2705; Trzeba:
+    &#x1F44D; Trzeba:
 
     ```javascript
     shadow.textContent = '...';
@@ -177,13 +177,13 @@
 
     wewnątrz dokumentu importowanego przy pomocy `link[rel=import]`.
 
-    &#x26D4;Nie wolno:
+    &#x26D4; Nie wolno:
 
     ```javascript
     document.querySelector('...')
     ```
 
-    &#x2705; Trzeba:
+    &#x1F44D; Trzeba:
 
     ```javascript
     document.currentScript.ownerDocument.querySelector('...')
