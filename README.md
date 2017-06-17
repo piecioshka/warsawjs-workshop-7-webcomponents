@@ -6,17 +6,21 @@
 
 ## Wspierane przeglądarki
 
-* Google Chrome v54
+* Google Chrome v53
 
-## Projekt 1: Mockup
+## Projekt 1: Mockup ([Demo][demo-1])
 
 > Prezentacja obrazka w na komputerze
+
+<details>
+    <summary>Treść zadania nr. 1</summary>
 
 1. Można wykorzystać:
     - https://unsplash.it/720/400?image=8
     - https://unsplash.it/720/400?image=9
 2. Zbudowanie obrazka z tekstem.
     2.1. Tekst musi być inny fontem
+    2.2. Dodanie styli dla komponentu
 3. Wrzucenie markupu do `<template>`.
 4. Zbudowanie CustomElement-u
     4.1. Stworzenie klasy dziedziczącej po `HTMLElement`
@@ -26,8 +30,7 @@
     4.5. Render szablonu do Shadow DOM-a
         - jak widać obrazek, pomimo tego, że ma ustawiony atrybut `src` nie 
             jest wysyłany request po zasób
-    4.6. Dodanie styli komponentu
-    4.7. Pobranie linku do obrazka
+    4.6. Pobranie linku do obrazka
 5. Dodać kolejny custom element z innym obrazkiem
     5.1. Rozwiązać problem braku szablonu za pomocą `cloneNode(true)`
 6. Dodać możliwość ustawiania innego tekstu dla różnych elementów
@@ -36,13 +39,56 @@
     7.1. Stworzenie głównego pliku index.html w aplikacji
     7.2. Import komponentu za pomocą HTML Imports `<link rel="import"/>`
 
----
+</details>
 
-## Projekt 2
+## Projekt 2. GitHub Profile Card ([Demo][demo-2])
 
----
+> Prezentacja danych dowolnego użytkownika portalu GitHub
+
+<details>
+    <summary>Treść zadania nr. 2</summary>
+
+1. Stworzenie markupu
+    1.1. Ustawienie kodowania 
+    1.2. Ustawienie tytułu strony 
+    1.3. Stworzenie template-u w znaczniku `<template>`
+    1.4. Dołączenie pliku `main.js`
+    1.5. Wykorzystanie znacznika `github-profile-card-element` do prezentacji
+        danych na temat dowolnego użytkownika GitHub-a.
+2. Ostylować komponent
+    2.1. Avatar użytkownika
+    2.2. Imię i nazwisko
+    2.3. Bio
+    2.4. Lista popularnych repozytoriów
+3. Zarejestrowanie komponentu
+    3.1. Stworzenie klasy dziedziczącej po `HTMLElement`
+    3.2. Dołączenie Shadow DOM-a w konstruktorze
+    3.3. W lifecycle hooku `connectedCallback`
+        3.3.1. Wyrenderować template
+        3.3.2. Pobrać login z atrybutów
+        3.3.3. Wysłać zapytanie po publiczne dane użytkownika, którego login 
+            został zdefiniowany w atrybucie
+    3.4. Wyświetlić dane użytkownika: imię i nazwisko, avatar, bio, lokalizację
+    3.5. Po wykonaniu pierwszego zapytania wykonać drugie, które pobierze 
+        listę wszystkich repozytoriów.
+    3.6. UWAGA: ze względu na limit zapytań w GitHub API, zapisać sobie 
+        odpowiedzi do katalog `mocks/` a następnie zamienić URLe na pliki 
+        statyczne
+    3.7. Posortować listę repozytoriów według liczby gwiazdek
+    3.8. Zredukować listę repozytoriów do kilku, np. 5
+    3.9. Wyrenderować repozytoria
+
+</details>
 
 ## Projekt 3
+
+> TODO
+
+<details>
+    <summary>Treść zadania nr. 3</summary>
+    
+    1. ...
+</details>
 
 ---
 
@@ -85,6 +131,17 @@
     ```
 
 ---
+
+## Źródła, czyli tam gdzie warto zajrzeć
+
+* https://github.com/piotrl/github-profile-card
+
+---
 ## License
 
 [The MIT License](http://piecioshka.mit-license.org) @ 2017
+
+
+
+[demo-1]: https://piecioshka.github.io/warsawjs-workshop-7-webcomponents/1-mockup
+[demo-2]: https://piecioshka.github.io/warsawjs-workshop-7-webcomponents/2-github-profile-card

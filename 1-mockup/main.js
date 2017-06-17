@@ -5,7 +5,8 @@ class MockupElement extends HTMLElement {
     }
 
     connectedCallback() {
-        let template = document.querySelector('#mockup-template').content.cloneNode(true);
+        let template = document.querySelector('#mockup-template')
+            .content.cloneNode(true);
         this.shadow.appendChild(template);
 
         let photo = this.attributes.getNamedItem('photo').value;
