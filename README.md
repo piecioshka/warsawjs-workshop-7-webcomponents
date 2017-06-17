@@ -131,43 +131,43 @@
 
 ## Popularne błędy
 
-* Error nr. 1
+* **Error nr. 1**
 
     ```
     Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': "mockup" is not a valid custom element name
     ```
 
-    Nie wolno:
+    &#x26D4;Nie wolno:
 
     ```javascript
     customElement.define('mockup', MockupElement);
     ```
 
-    Trzeba:
+    &#x2705; Trzeba:
 
     ```javascript
     customElement.define('mockup-element', MockupElement);
     ```
 
-* Error nr. 2
+* **Error nr. 2**
 
     ```
     Uncaught DOMException: Failed to construct 'CustomElement': The result must not have children (anonymous) @ (index):13
     ```
 
-    Nie wolno:
+    &#x26D4;Nie wolno:
 
     ```javascript
     this.textContent = '...';
     ```
 
-    Trzeba:
+    &#x2705; Trzeba:
 
     ```javascript
     shadow.textContent = '...';
     ```
 
-* Error nr. 3
+* **Error nr. 3**
 
     ```
     Uncaught TypeError: Cannot read property 'content' of null
@@ -177,13 +177,13 @@
 
     wewnątrz dokumentu importowanego przy pomocy `link[rel=import]`.
 
-    Nie wolno:
+    &#x26D4;Nie wolno:
 
     ```javascript
     document.querySelector('...')
     ```
 
-    Trzeba:
+    &#x2705; Trzeba:
 
     ```javascript
     document.currentScript.ownerDocument.querySelector('...')
