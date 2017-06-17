@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+:host {
+    display: inline-block;
+    width: 720px;
+    height: 400px;
+    background-color: black;
+    background-image: url(https://unsplash.it/720/400?image=8);
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    color: #e2e2e2;
+    text-align: center;
+    margin: 330px 0 0 0;
+    position: relative;
+    text-shadow: 1px 1px 3px black;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 5px black;
+}
+
+img {
+    position: absolute;
+    left: 229px;
+    top: 4px;
+    width: 259px;
+    height: 211px;
+    transform: perspective(2000px) rotate3d(1, 0, 0, -45deg);
+}
