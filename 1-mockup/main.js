@@ -9,10 +9,10 @@ class MockupElement extends HTMLElement {
             .content.cloneNode(true);
         this.shadow.appendChild(template);
 
-        let photo = this.attributes.getNamedItem('photo').value;
+        let photo = this.attributes.photo.value;
         this.shadow.querySelector('img').setAttribute('src', photo);
 
-        let label = this.attributes.getNamedItem('label').value;
+        let label = this.attributes.label.value;
         this.shadow.querySelector('h1').textContent = label;
     }
 }

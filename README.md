@@ -80,14 +80,32 @@
 
 </details>
 
-## Projekt 3
+## Projekt 3: Media Projector ([Demo][demo-3])
 
-> TODO
+> Prezentacja dowolnych media obiektów (np. obrazków) w stylu rotowalnym.
 
 <details>
     <summary>Treść zadania nr. 3</summary>
     
-    1. ...
+1. Stworzenie markupu
+    1.1. Dodanie 3 zdjęć jako dzieci nowo dodawanego komponentu.
+2. Ostylowanie komponentu
+    2.1. Na środku prezentować pole na media obiekt
+    2.2. Na środku nad polem prezentować guzik PLAY
+3. Zarejestrować akcję na kliknięcie w komponent
+    3.1. Za pamięci od razu wyrejestrować handler na lifecycle hooku 
+        `disconnectCallback`
+4. Stworzyć klasę `Slider`, która będzie emulowała rotowanie elementu
+    4.1. Wykorzystać `ES5 getter`
+5. Po kliknięciu w komponent zainicjować slider przekazując mu dane o 
+    dzieciach wraz z definicją funkcji, która zostanie uruchomiona 
+    każdorazowo gdy slider chce zaprezentować inną treść
+    5.1. Stworzyć funkcję, która będzie wlewała do kontenera z ekranem żądany
+        media obiekt
+6. Zmienić kursor myszy, po najechaniu na przycisk PLAY
+    4.1. Nie pokazywać łapki kiedy prezentowane są media obiekty
+    
+
 </details>
 
 ---
@@ -142,6 +160,6 @@
 [The MIT License](http://piecioshka.mit-license.org) @ 2017
 
 
-
 [demo-1]: https://piecioshka.github.io/warsawjs-workshop-7-webcomponents/1-mockup
 [demo-2]: https://piecioshka.github.io/warsawjs-workshop-7-webcomponents/2-github-profile-card
+[demo-3]: https://piecioshka.github.io/warsawjs-workshop-7-webcomponents/3-media-projector

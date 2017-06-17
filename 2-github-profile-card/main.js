@@ -7,7 +7,7 @@ class GitHubProfileCardElement extends HTMLElement {
     connectedCallback() {
         this._renderTemplate();
 
-        let login = this.attributes.getNamedItem('login').value;
+        let login = this.attributes.login.value;
 
         Promise.resolve(login)
             .then(this._fetchProfileDetails.bind(this))

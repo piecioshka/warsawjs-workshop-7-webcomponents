@@ -1,0 +1,45 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+:host {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    overflow: hidden;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e2e2e2;
+}
+
+.media-screen {
+    display: inline-block;
+    width: 550px;
+    height: 300px;
+    background: black;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.media-screen:before {
+    content: '►';
+    font-size: 150px;
+    color: white;
+    position: absolute;
+    left: 200px;
+    top: 50px;
+}
+
+.media-screen:empty:before {
+    cursor: pointer;
+}
+
+.media-screen:not(:empty):before {
+    display: none;
+}
