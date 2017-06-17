@@ -196,6 +196,8 @@
 ## Źródła, czyli tam gdzie warto zajrzeć
 
 * https://github.com/piotrl/github-profile-card
+* https://css-tricks.com/snippets/css/complete-guide-grid/
+* http://placeskull.com/
 * https://www.html5rocks.com/en/tutorials/webcomponents/imports/
 * https://hacks.mozilla.org/2014/12/mozilla-and-web-components/
 
