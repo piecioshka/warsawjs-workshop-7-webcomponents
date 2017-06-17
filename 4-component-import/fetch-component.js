@@ -14,9 +14,9 @@ let fetchComponent = (function () {
         return stylesheet.href = createRelativeURL(componentURL, stylesheet.getAttribute('href'));
     }
 
-    function fetchComponent(id) {
+    function fetchComponent(url) {
         let options = { method: 'GET' };
-        return fetch(id, options)
+        return fetch(url, options)
             .then(response => response.text())
             .then(html => parseResponse(html))
             .then(imported => {
@@ -24,8 +24,8 @@ let fetchComponent = (function () {
                 let script = imported.querySelector('script');
                 let newScript = document.createElement('script');
 
-                fixStylesheetLink(id, template.content);
-                newScript.src = createRelativeURL(id, script.getAttribute('src'));
+                fixStylesheetLink(url, template.content);
+                newScript.src = createRelativeURL(url, script.getAttribute('src'));
 
                 document.body.appendChild(template);
                 document.body.appendChild(newScript);

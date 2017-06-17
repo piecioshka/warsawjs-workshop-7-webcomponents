@@ -16,6 +16,7 @@ class MediaProjectorElement extends HTMLElement {
     _onClickHandler() {
         if (this.slider) {
             // Jeśli slider już istnieje, ignorujemy kliknięcie.
+            console.warn('Click handler was disabled');
             return;
         }
 

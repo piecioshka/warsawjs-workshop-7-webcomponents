@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <meta charset="UTF-8">
-    <title>Projekt 4: Importowanie Web Componentu – Fetch API</title>
+    <meta charset="utf-8"/>
+    <title>Projekt 4: Importowanie Web Component-u – Fetch API</title>
     <style>
         *, *:before, *:after {
             box-sizing: border-box;
@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <h1>Projekt 4: Importowanie Web Componentu – Fetch API</h1>
+    <h1>Projekt 4: Importowanie Web Component-u – Fetch API</h1>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a purus
         luctus arcu aliquet facilisis a at nibh. Aenean tempus massa at ex
@@ -25,10 +25,9 @@
         sodales.
     </p>
 
-    <mockup-element
-        label="Mockup Component"
-        photo="https://avatars3.githubusercontent.com/u/244935?v=3&u=9345743bc4ee44ca5def52884433bdda6131640b&s=400"
-    ></mockup-element>
+    <test-element
+        label="Example Component (Fetch API)"
+    ></test-element>
 
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a purus
@@ -47,7 +46,9 @@
     <script src="fetch-component.js"></script>
     <script>
         fetchComponent('component/index.html')
-            .then(() => console.log('Komponent został pobrany'));
+            .then(() => {
+                console.log('Komponent został pobrany');
+            });
     </script>
 </body>
 </html>

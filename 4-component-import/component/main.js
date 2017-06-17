@@ -1,4 +1,4 @@
-class MockupElement extends HTMLElement {
+class TestElement extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow({ mode: 'open' });
@@ -6,16 +6,13 @@ class MockupElement extends HTMLElement {
 
     connectedCallback() {
         let importDocument = document.currentScript.ownerDocument;
-        let template = importDocument.querySelector('#mockup-template')
+        let template = importDocument.querySelector('#test-template')
             .content.cloneNode(true);
         this.shadow.appendChild(template);
 
-        let photo = this.attributes.getNamedItem('photo').value;
-        this.shadow.querySelector('img').setAttribute('src', photo);
-
-        let label = this.attributes.getNamedItem('label').value;
+        let label = this.attributes.label.value;
         this.shadow.querySelector('h1').textContent = label;
     }
 }
 
-window.customElements.define('mockup-element', MockupElement);
+window.customElements.define('test-element', TestElement);

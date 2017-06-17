@@ -25,12 +25,14 @@ class GitHubProfileCardElement extends HTMLElement {
     _fetchProfileDetails(login) {
         let url = '../mocks/github-piecioshka-profile.json';
         // let url = 'https://api.github.com/users/' + login;
-        return fetch(url)
+
+        let options = { method: 'GET' };
+        return fetch(url, options)
             .then((response) => {
                 return response.json();
             })
             .then((profile) => {
-                console.log(profile);
+                // console.log(profile);
                 this._displayAvatar(profile.avatar_url);
                 this._displayName(profile.name);
                 this._displayBio(profile.bio);
@@ -61,7 +63,9 @@ class GitHubProfileCardElement extends HTMLElement {
     _fetchProfileRepositories(profile) {
         // let url = profile.repos_url;
         let url = '../mocks/github-piecioshka-repositories.json';
-        return fetch(url)
+
+        let options = { method: 'GET' };
+        return fetch(url, options)
             .then((response) => {
                 return response.json();
             })
@@ -73,7 +77,7 @@ class GitHubProfileCardElement extends HTMLElement {
                 return repositories;
             })
             .then((repositories) => {
-                console.log(repositories);
+                // console.log(repositories);
                 this._displayRepositories(repositories);
             })
             .catch((error) => {
