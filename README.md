@@ -15,29 +15,27 @@
 <details>
     <summary>Treść zadania nr. 1</summary>
 
-1. Można wykorzystać:
-    - https://unsplash.it/720/400?image=8
-    - https://unsplash.it/720/400?image=9
-2. Zbudowanie obrazka z tekstem.
-    2.1. Tekst musi być inny fontem
-    2.2. Dodanie styli dla komponentu
-3. Wrzucenie markupu do `<template>`.
-4. Zbudowanie CustomElement-u
-    4.1. Stworzenie klasy dziedziczącej po `HTMLElement`
-    4.2. Podłączenie Shadow DOM-a do custom elementu
-    4.3. Zapisanie się na lifecycle hook `connectedCallback`
-    4.4. Pobranie zawartości szablonu
-    4.5. Render szablonu do Shadow DOM-a
-        - jak widać obrazek, pomimo tego, że ma ustawiony atrybut `src` nie 
+1. Zaprezentować obrazek z tekstem.
+    1.1. Tekst musi być inny fontem
+    1.2. Dodanie styli dla komponentu
+2. Stworzyć markup w `<template>`.
+3. Zbudować custom element
+    3.1. Stworzyć klasę dziedziczącą po `HTMLElement`
+    3.2. Podłączyć Shadow DOM-a do custom elementu
+    3.3. Zapisać się na lifecycle hook `connectedCallback`
+    3.4. Pobrać zawartość szablonu
+    3.5. Wyrenderować szablon do Shadow DOM-a
+        - widać obrazek, pomimo tego, że ma ustawionego atrybutu `src` nie 
             jest wysyłany request po zasób
-    4.6. Pobranie linku do obrazka
-5. Dodać kolejny custom element z innym obrazkiem
-    5.1. Rozwiązać problem braku szablonu za pomocą `cloneNode(true)`
-6. Dodać możliwość ustawiania innego tekstu dla różnych elementów
-    6.1. Rozwiązać problem z kodowaniem ustawiając odpowiedni meta tag.
-7. Zamknięcie komponentu w pojedynczy katalog
-    7.1. Stworzenie głównego pliku index.html w aplikacji
-    7.2. Import komponentu za pomocą HTML Imports `<link rel="import"/>`
+    3.6. Pobrać adres do obrazka
+    3.7. Wyrenderować obrazek
+4. Dodać kolejny custom element (z innym obrazkiem)
+    4.1. Rozwiązać problem braku szablonu za pomocą `cloneNode(true)`
+5. Dodać możliwość ustawiania innego tekstu dla różnych elementów
+    5.1. Rozwiązać problem z kodowaniem ustawiając odpowiedni meta tag.
+6. Zamknąć komponent w pojedynczy katalog
+    6.1. Stworzyć główny plik `index.html` w aplikacji
+    6.2. Zaimportować komponent za pomocą HTML Imports `<link rel="import"/>`
 
 </details>
 
@@ -86,7 +84,7 @@
 
 <details>
     <summary>Treść zadania nr. 3</summary>
-    
+
 1. Stworzenie markupu
     1.1. Dodanie 3 zdjęć jako dzieci nowo dodawanego komponentu.
 2. Ostylowanie komponentu
@@ -152,6 +150,7 @@
 
 ## Źródła, czyli tam gdzie warto zajrzeć
 
+* https://unsplash.it/
 * https://github.com/piotrl/github-profile-card
 * https://css-tricks.com/snippets/css/complete-guide-grid/
 * http://placeskull.com/
