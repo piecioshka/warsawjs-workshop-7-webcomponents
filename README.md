@@ -193,12 +193,41 @@
 
 ## Źródła, czyli tam gdzie warto zajrzeć
 
-* https://unsplash.it/
-* https://github.com/piotrl/github-profile-card
-* https://css-tricks.com/snippets/css/complete-guide-grid/
-* http://placeskull.com/
-* https://www.html5rocks.com/en/tutorials/webcomponents/imports/
-* https://hacks.mozilla.org/2014/12/mozilla-and-web-components/
+* Artykuły
+    * https://css-tricks.com/snippets/css/complete-guide-grid/
+    * https://www.html5rocks.com/en/tutorials/webcomponents/imports/
+    * https://hacks.mozilla.org/2014/12/mozilla-and-web-components/
+    * https://developers.google.com/web/fundamentals/getting-started/primers/customelements
+    * https://github.com/GoogleChrome/howto-components
+* Video
+    * https://www.youtube.com/watch?v=2YEE5W8HdKk
+        - Slajdy: http://slides.com/smalluban/webcomponents
+        - Dominik Lubański: **Web Components. Are we there yet?**
+    * https://www.youtube.com/watch?v=myvGmcwOnL4
+        - Slajdy: http://slides.com/coderitual/potential-power-of-web-components
+        - Michał Skowronek: **Potential power of web components**
+* Shimy / Polyfille
+    * ShadyCSS - ShadowDOM style encapsulation
+        - https://github.com/webcomponents/shadycss
+    * ShadyDOM (mniejszy od ShadowDOM Polyfill)
+        - https://github.com/webcomponents/shadydom
+    * WebComponents.js
+        - https://github.com/webcomponents/webcomponentsjs
+    * Polymer
+        - https://www.polymer-project.org/
+        - w wersji v2 będzie wspierał v1
+    * X-Tag
+        - https://x-tag.github.io/
+        - wspiera v0
+    * Skate.js
+        - https://skatejs.gitbooks.io/skatejs/content/
+    * WebComponents.org
+        - https://www.webcomponents.org/
+* Inne
+    * https://unsplash.it/
+    * http://placeskull.com/
+    * https://github.com/piotrl/github-profile-card
+    * https://w3c.github.io/webcomponents/spec/custom/ - Specyfikacja
 
 ---
 ## License
