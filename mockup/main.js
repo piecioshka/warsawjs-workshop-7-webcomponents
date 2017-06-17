@@ -8,11 +8,6 @@ class MockupElement extends HTMLElement {
         let template = document.querySelector('#mockup-template').content.cloneNode(true);
         this.shadow.appendChild(template);
 
-        let $style = document.createElement('link');
-        $style.href = 'main.css';
-        $style.rel = 'stylesheet';
-        this.shadow.appendChild($style);
-
         let photo = this.attributes.getNamedItem('photo').value;
         this.shadow.querySelector('img').setAttribute('src', photo);
 
