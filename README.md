@@ -92,7 +92,7 @@
     2. Na środku nad polem prezentować guzik PLAY
 3. Zarejestrować akcję na kliknięcie w komponent
     1. Za pamięci od razu wyrejestrować handler na lifecycle hooku
-        `disconnectCallback`
+        `disconnectedCallback`
 4. Stworzyć klasę `Slider`, która będzie emulowała rotowanie elementu
     1. Wykorzystać `ES5 getter`
 5. Po kliknięciu w komponent zainicjować slider przekazując mu dane o

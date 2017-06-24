@@ -10,7 +10,7 @@ class MediaProjectorElement extends HTMLElement {
         this.addEventListener('click', this._onClickHandler);
     }
 
-    disconnectCallback() {
+    disconnectedCallback() {
         this.removeEventListener('click', this._onClickHandler);
     }
 
