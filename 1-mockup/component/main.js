@@ -5,7 +5,8 @@ class MockupElement extends HTMLElement {
     }
 
     connectedCallback() {
-        let template = document.querySelector('#mockup-template')
+        let template = MockupElement.DOCUMENT
+            .querySelector('#mockup-template')
             .content.cloneNode(true);
         this.shadow.appendChild(template);
 
@@ -16,5 +17,7 @@ class MockupElement extends HTMLElement {
         this.shadow.querySelector('h1').textContent = label;
     }
 }
+
+MockupElement.DOCUMENT = document.currentScript.ownerDocument;
 
 window.customElements.define('mockup-element', MockupElement);

@@ -17,14 +17,15 @@ class GitHubProfileCardElement extends HTMLElement {
     }
 
     _renderTemplate() {
-        let template = document.querySelector('#github-profile-card-template')
+        let template = GitHubProfileCardElement.DOCUMENT
+            .querySelector('#github-profile-card-template')
             .content.cloneNode(true);
         this.shadow.appendChild(template);
     }
 
     _fetchProfileDetails(login) {
-        let url = '../mocks/github-piecioshka-profile.json';
-        // let url = 'https://api.github.com/users/' + login;
+        // let url = '/warsawjs-workshop-7-webcomponents/mocks/github-piecioshka-profile.json';
+        let url = 'https://api.github.com/users/' + login;
 
         let options = { method: 'GET' };
         return fetch(url, options)
@@ -61,8 +62,8 @@ class GitHubProfileCardElement extends HTMLElement {
     }
 
     _fetchProfileRepositories(profile) {
-        // let url = profile.repos_url;
-        let url = '../mocks/github-piecioshka-repositories.json';
+        let url = profile.repos_url;
+        // let url = '/warsawjs-workshop-7-webcomponents/mocks/github-piecioshka-repositories.json';
 
         let options = { method: 'GET' };
         return fetch(url, options)
@@ -113,5 +114,7 @@ class GitHubProfileCardElement extends HTMLElement {
         this.shadow.querySelector('.profile-repository-list').appendChild($list);
     }
 }
+
+GitHubProfileCardElement.DOCUMENT = document.currentScript.ownerDocument;
 
 window.customElements.define('github-profile-card-element', GitHubProfileCardElement);

@@ -1,3 +1,4 @@
+
 class MediaProjectorElement extends HTMLElement {
     constructor() {
         super();
@@ -35,10 +36,13 @@ class MediaProjectorElement extends HTMLElement {
     }
 
     _renderTemplate() {
-        let template = document.querySelector('#media-projector-template')
+        let template = MediaProjectorElement.DOCUMENT
+            .querySelector('#media-projector-template')
             .content.cloneNode(true);
         this.shadow.appendChild(template);
     }
 }
+
+MediaProjectorElement.DOCUMENT = document.currentScript.ownerDocument;
 
 window.customElements.define('media-projector-element', MediaProjectorElement);

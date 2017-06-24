@@ -6,44 +6,9 @@
     }
 </style>
 
-<!-- //-->
-
-<template id="media-projector-template">
-    <link rel="stylesheet" href="main.css"/>
-
-    <h1>Media Projector</h1>
-    <div class="media-screen"></div>
-</template>
-
-<script src="slider.js"></script>
-<script src="main.js"></script>
-
-<!-- //-->
-
-<template id="mockup-template">
-    <link rel="stylesheet" href="../1-mockup/main.css"/>
-    <h1>Czy ten tekst się wyświetli?</h1>
-    <img src="https://piecioshka.pl/blog/test-zapytania-http" alt=""/>
-</template>
-
-<script src="../1-mockup/main.js"></script>
-
-<!-- //-->
-
-<template id="github-profile-card-template">
-    <link rel="stylesheet" href="../2-github-profile-card/main.css"/>
-
-    <img class="profile-avatar" src="" alt=""/>
-    <h1 class="profile-name">...</h1>
-    <p class="profile-bio">...</p>
-    <h2 class="profile-location">...</h2>
-    <hr/>
-    <ul class="profile-repository-list"></ul>
-</template>
-
-<script src="../2-github-profile-card/main.js"></script>
-
-<!-- //-->
+<link rel="import" href="../1-mockup/component/component.html"/>
+<link rel="import" href="../2-github-profile-card/component/component.html"/>
+<link rel="import" href="../3-media-projector/component/component.html"/>
 
 <media-projector-element>
     <github-profile-card-element
