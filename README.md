@@ -2,7 +2,7 @@
 
 > Aplikacja stworzona na potrzeby WarsawJS Workshop #7
 
-![](http://warsawjs.com/assets/images/logo/logo-transparent-240x240.png)
+![](images/logo-warsawjs-transparent-240x240.png)
 
 ## Wspierane przeglądarki
 
