@@ -1,8 +1,6 @@
 # warsawjs-workshop-7-webcomponents
 
-> Aplikacja stworzona na potrzeby WarsawJS Workshop #7
-
-![](images/logo-warsawjs-transparent-240x240.png)
+⛩️ WarsawJS Workshop #7 — Web Components
 
 ## Wspierane przeglądarki
 
