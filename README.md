@@ -222,7 +222,7 @@
     * WebComponents.org
         - https://www.webcomponents.org/
 * Inne
-    * https://unsplash.it/
+    * https://picsum.photos/
     * http://placeskull.com/
     * https://github.com/piotrl/github-profile-card
     * https://w3c.github.io/webcomponents/spec/custom/ - Specyfikacja
